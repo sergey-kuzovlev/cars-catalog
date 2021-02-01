@@ -2216,8 +2216,13 @@
         "signature": "641f585bb5106aa57b844d12353bca1f91bf47c596c6abb5af8cbbefdc12fee3",
         "affectsGlobalScope": false
       },
+      "./node_modules/dotenv/types/index.d.ts": {
+        "version": "c9ae0b351a07b52f29a28e869d8c7c8d29743bbb5eeddc7c0b5b2a69a2450528",
+        "signature": "c9ae0b351a07b52f29a28e869d8c7c8d29743bbb5eeddc7c0b5b2a69a2450528",
+        "affectsGlobalScope": false
+      },
       "./src/app.module.ts": {
-        "version": "af0cd1e178da1e562871f097616a91426edc1ef20d7ac52fd7378b40902e71e5",
+        "version": "e041c01b0845655271428ece4563da806a35a6faebccd713d6dfc804bc4d77f1",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88",
         "affectsGlobalScope": false
       },
@@ -4281,6 +4286,9 @@
       "./node_modules/class-validator/types/validation/validatorconstraintinterface.d.ts": [
         "./node_modules/class-validator/types/validation/validationarguments.d.ts"
       ],
+      "./node_modules/dotenv/types/index.d.ts": [
+        "./node_modules/@types/node/index.d.ts"
+      ],
       "./node_modules/jest-diff/build/difflines.d.ts": [
         "./node_modules/jest-diff/build/cleanupsemantic.d.ts",
         "./node_modules/jest-diff/build/types.d.ts"
@@ -4604,6 +4612,7 @@
       "./src/app.module.ts": [
         "./node_modules/@nestjs/common/index.d.ts",
         "./node_modules/@nestjs/mongoose/index.d.ts",
+        "./node_modules/dotenv/types/index.d.ts",
         "./src/cars/cars.module.ts"
       ],
       "./src/cars/cars.controller.ts": [
@@ -7238,6 +7247,9 @@
         "./node_modules/@types/mongoose/index.d.ts",
         "./node_modules/mongoose/index.d.ts"
       ],
+      "./node_modules/dotenv/types/index.d.ts": [
+        "./node_modules/@types/node/index.d.ts"
+      ],
       "./node_modules/jest-diff/build/cleanupsemantic.d.ts": [
         "./node_modules/@types/mongoose/index.d.ts",
         "./node_modules/mongoose/index.d.ts"
@@ -8313,6 +8325,7 @@
       "./node_modules/class-validator/types/validation/validator.d.ts",
       "./node_modules/class-validator/types/validation/validatorconstraintinterface.d.ts",
       "./node_modules/class-validator/types/validation/validatoroptions.d.ts",
+      "./node_modules/dotenv/types/index.d.ts",
       "./node_modules/jest-diff/build/cleanupsemantic.d.ts",
       "./node_modules/jest-diff/build/difflines.d.ts",
       "./node_modules/jest-diff/build/index.d.ts",
