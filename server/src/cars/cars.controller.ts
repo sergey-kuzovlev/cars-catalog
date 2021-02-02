@@ -15,11 +15,11 @@ import { CarsService } from './cars.service';
 import { CreateCarDto, UpdateCarDto } from './dto';
 import { PaginationQueryDto } from '../common/dto/pagination-query.dto';
 
-@Controller('api/cars')
+@Controller('api')
 export class CarsController {
   constructor(private readonly carsService: CarsService) {}
 
-  @Get()
+  @Get('/cars')
   public async getAllCar(
     @Res() res,
     @Query() paginationQuery: PaginationQueryDto,
@@ -30,7 +30,7 @@ export class CarsController {
     return res.status(HttpStatus.OK).json(cars);
   }
 
-  @Get('/:id')
+  @Get('/car/:id')
   public async getCar(
     @Res() res,
     @Param('id') carId: string,

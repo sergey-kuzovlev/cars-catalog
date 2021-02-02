@@ -1,8 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
-import { ICar } from './interfaces/car.interface';
-import { CreateCarDto, UpdateCarDto } from './dto';
 import { Car } from './schemas/car.schema';
 import { PaginationQueryDto } from 'src/common/dto/pagination-query.dto';
 

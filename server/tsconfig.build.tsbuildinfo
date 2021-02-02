@@ -1521,9 +1521,9 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "affectsGlobalScope": false
       },
-      "./src/cars/interfaces/car.interface.ts": {
-        "version": "27f97fdb7f5889de54462c0be3da883ae738b7eee7794c449ff50fc014df86fd",
-        "signature": "418a08749d9b67506a0349bf1a7b69ac6dbd3aad55517e3ec339f54837e59559",
+      "./src/cars/schemas/car.schema.ts": {
+        "version": "e2235de7ab6d2cb6c681816bdfffe74fa226d8b320b5466de0d81a36eec69164",
+        "signature": "1df47063601b63bd58aef2ae6ef4738f69b843df57d4e54063d176815bbea66a",
         "affectsGlobalScope": false
       },
       "./node_modules/class-validator/types/validation/validationerror.d.ts": {
@@ -2141,6 +2141,16 @@
         "signature": "1d5f30cbd06ffa2aab22346b087e140f069851c17b91189be8d1e168d53f9f93",
         "affectsGlobalScope": false
       },
+      "./src/common/dto/pagination-query.dto.ts": {
+        "version": "b259bb6ce5ca9b4f6ab910458d8bff4dcb0e7a05141939fc5d4baf95e2fd01e1",
+        "signature": "5f42ab6924b5398345d433eb7b6624f4856ac2fccaf8b81496b06cfe9aad0934",
+        "affectsGlobalScope": false
+      },
+      "./src/cars/cars.service.ts": {
+        "version": "a9dca4f9299feb274adbbd351f3678b4dfbf1fe0225f1492260572ef5d68328d",
+        "signature": "cf0ee793b4ab104c635fe509bb8c549ccea5d15025a7771d2c140556fb978152",
+        "affectsGlobalScope": false
+      },
       "./src/cars/dto/create-car.dto.ts": {
         "version": "c8d99a4a86d35a58ab8b8f8705d30bfbb2695708b2612cfe9f305b2e0ba9ca3b",
         "signature": "88759704e6100e3c8d2dd19b1687eb66ea7d2aeaa2d9be910c54d463d4b492d1",
@@ -2191,23 +2201,8 @@
         "signature": "7c03b161d72135cac05396d25bf05cf47a8a24a72d03ade0b57ab9e17a9a0e26",
         "affectsGlobalScope": false
       },
-      "./src/cars/schemas/car.schema.ts": {
-        "version": "e2235de7ab6d2cb6c681816bdfffe74fa226d8b320b5466de0d81a36eec69164",
-        "signature": "1df47063601b63bd58aef2ae6ef4738f69b843df57d4e54063d176815bbea66a",
-        "affectsGlobalScope": false
-      },
-      "./src/common/dto/pagination-query.dto.ts": {
-        "version": "b259bb6ce5ca9b4f6ab910458d8bff4dcb0e7a05141939fc5d4baf95e2fd01e1",
-        "signature": "5f42ab6924b5398345d433eb7b6624f4856ac2fccaf8b81496b06cfe9aad0934",
-        "affectsGlobalScope": false
-      },
-      "./src/cars/cars.service.ts": {
-        "version": "24c76c57a98565083a55280f1b18924559067a9d0862bfc8783f3144f869a7eb",
-        "signature": "cf0ee793b4ab104c635fe509bb8c549ccea5d15025a7771d2c140556fb978152",
-        "affectsGlobalScope": false
-      },
       "./src/cars/cars.controller.ts": {
-        "version": "c4d71b8880caf99c8009c77bda60c637672e7672f8cdbca056e01346909ee85f",
+        "version": "b4bdcf642ec844baf327ac9a637e8e33ab3e7e7c45ad9fed6ee029e467d49723",
         "signature": "679bbd1728b478fcb0664a56fea5b705297bd60edaa7aac4eb34a4021d079873",
         "affectsGlobalScope": false
       },
@@ -4632,8 +4627,6 @@
         "./node_modules/@nestjs/common/index.d.ts",
         "./node_modules/@nestjs/mongoose/index.d.ts",
         "./node_modules/mongoose/index.d.ts",
-        "./src/cars/dto/index.ts",
-        "./src/cars/interfaces/car.interface.ts",
         "./src/cars/schemas/car.schema.ts",
         "./src/common/dto/pagination-query.dto.ts"
       ],
@@ -4647,9 +4640,6 @@
       "./src/cars/dto/update-car.dto.ts": [
         "./node_modules/@nestjs/mapped-types/index.d.ts",
         "./src/cars/dto/create-car.dto.ts"
-      ],
-      "./src/cars/interfaces/car.interface.ts": [
-        "./node_modules/mongoose/index.d.ts"
       ],
       "./src/cars/schemas/car.schema.ts": [
         "./node_modules/@nestjs/mongoose/index.d.ts",
@@ -7890,9 +7880,6 @@
         "./node_modules/@nestjs/common/index.d.ts",
         "./src/cars/dto/create-car.dto.ts"
       ],
-      "./src/cars/interfaces/car.interface.ts": [
-        "./node_modules/mongoose/index.d.ts"
-      ],
       "./src/cars/schemas/car.schema.ts": [
         "./node_modules/mongoose/index.d.ts"
       ]
@@ -8439,7 +8426,6 @@
       "./src/cars/dto/create-car.dto.ts",
       "./src/cars/dto/index.ts",
       "./src/cars/dto/update-car.dto.ts",
-      "./src/cars/interfaces/car.interface.ts",
       "./src/cars/schemas/car.schema.ts",
       "./src/common/dto/pagination-query.dto.ts",
       "./src/main.ts"
