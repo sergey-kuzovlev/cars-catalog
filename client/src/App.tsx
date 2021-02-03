@@ -10,15 +10,15 @@ const history = createBrowserHistory();
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Router history={history}>
-        <CarsTable />
-        <Switch>
-          <Route path="/car/:id" component={CarDetailPage} />
-        </Switch>
-      </Router>
-    </div>
+  <div className="App">
+    <Navbar />
+    <Router history={history}>
+      <Switch>
+        <Route exact path="/" component={CarsTable} />
+        <Route path="/car/:id" component={CarDetailPage} />
+      </Switch>
+    </Router>
+  </div>
   );
 }
 

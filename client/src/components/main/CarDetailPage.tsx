@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import { ICar } from './interfaces/car.interface';
+import { ICar, ICarDetailPageProps } from './interfaces/car.interface';
+import * as carService from "./services/car.service";
 
-const CarDetailPage: React.FC = ({ match }: any) => {
+const CarDetailPage: React.FC<ICarDetailPageProps> = (props)=> {
   const {
     params: { id },
-  } = match;
+  } = props.match;
 
-  const [carDetails, setDetails] = useState<ICar>({name: '', make: '', year: 0})
+  const defaultCarState = {
+    _id: '',
+    name: '',
+    make: '',
+    year: 0
+  }
 
+  const [carDetails, setDetailsState] = useState<ICar>(defaultCarState)
     useEffect(() => {
-    async function getCars() {
-      const response = await fetch(`http://localhost:4000/api/car/${id}`);
-      if (response.status !== 400) {
-        const details = await response.json();
-
-        setDetails(details)
-      }
-    }
-
-    getCars()
+      (async () => {
+        setDetailsState(await carService.getCarDetails(id))
+      })();
   }, []);
 
   return (
