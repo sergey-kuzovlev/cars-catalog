@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { ICar, ICarDetailPageProps } from './interfaces/car.interface';
-import * as carService from "./services/car.service";
+import { ICar, ICarDetailPageProps } from '../../interfaces/car.interface';
+import * as carService from "../../services/car.service";
 
 const CarDetailPage: React.FC<ICarDetailPageProps> = (props)=> {
   const {
@@ -19,7 +19,7 @@ const CarDetailPage: React.FC<ICarDetailPageProps> = (props)=> {
       (async () => {
         setDetailsState(await carService.getCarDetails(id))
       })();
-  }, []);
+  }, [id]);
 
   return (
     <div>
