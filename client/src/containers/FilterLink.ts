@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import { setVisibilityFilter } from '../actions'
 import Link from '../components/carsTable/Links'
 
-const mapStateToProps = (state: any, ownProps: any) => ({
+const mapStateToProps = (state: { visibilityFilter: string}, ownProps: any) => ({
   active: ownProps.filter === state.visibilityFilter
 })
 

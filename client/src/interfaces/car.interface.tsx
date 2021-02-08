@@ -12,3 +12,7 @@ export interface ICarDetailPageProps {
     };
   },
 }
+
+export interface IAction {
+  type: string;
+}

@@ -3,22 +3,20 @@ import {CarsTable} from '../components/carsTable/CarsTable'
 import { VisibilityFilters } from '../actions'
 import { ICar } from '../interfaces/car.interface'
 
-const getFilteredCars = (cars: ICar[], filter: any) => {
+const getFilteredCars = (cars: ICar[], filter: string): ICar[] => {
   switch (filter) {
     case VisibilityFilters.SHOW_ALL:
       return cars
     case VisibilityFilters.SHOW_BMW:
-      return cars.filter((t) => t.make === 'BMW')
+      return cars.filter((car: ICar) => car.make === 'BMW')
     default:
-      throw new Error('Unknown filter: ' + filter)
+      return []
   }
 }
 
-const mapStateToProps = (state: any): any => {
-  return {
+const mapStateToProps = (state: {cars: ICar[], visibilityFilter: string}): { cars: ICar[]} => ({
     cars: getFilteredCars(state.cars, state.visibilityFilter)
-  }
-}
+})
 
 export default connect(
   mapStateToProps,

@@ -9,7 +9,7 @@ import * as carService from "../../services/car.service";
 export const CarsTable: React.FC<any> = ({cars, dispatch}) => {
   useEffect(() => {
     carService.getCarsList()
-    .then((cars: any) => {
+    .then((cars: ICar[]) => {
       console.log(cars)
       dispatch(loadCars(cars))
     })
