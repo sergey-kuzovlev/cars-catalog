@@ -11,7 +11,8 @@ const CarDetailPage: React.FC<ICarDetailPageProps> = (props)=> {
     _id: '',
     name: '',
     make: '',
-    year: 0
+    year: 0,
+    image: ''
   }
 
   const [carDetails, setDetailsState] = useState<ICar>(defaultCarState)

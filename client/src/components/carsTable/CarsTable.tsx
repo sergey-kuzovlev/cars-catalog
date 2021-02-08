@@ -14,14 +14,18 @@ export const CarsTable: React.FC<any> = ({cars, dispatch}) => {
       dispatch(loadCars(cars))
     })
   }, [dispatch]);
-  
+
   return (
     <div className="container px1">
       <Filters />
       {(
         <div className="row">
           {cars && cars.map((car: ICar) => (
-            <Link className="col s3" key={car._id} to={`/car/${car._id}`}>
+            <Link 
+            className="col s3" 
+            key={car._id} 
+            to={`/car/${car._id}`} 
+            style={{backgroundImage: `url(http://localhost:4000/${car.image ? car.image : "default.png"})`}}>
               <div>{car.name}</div>
               <div>{car.make}</div>
               <div>{car.year}</div>

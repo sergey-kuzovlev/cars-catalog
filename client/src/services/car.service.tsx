@@ -17,5 +17,6 @@ const setCarData = (car: ICar) => ({
   _id: car._id, 
   name: car.name, 
   make: car.make, 
-  year: car.year
+  year: car.year,
+  image: car.image,
 })

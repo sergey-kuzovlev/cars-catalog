@@ -11,6 +11,9 @@ export class Car extends Document {
 
   @Prop()
   year: number;
+
+  @Prop()
+  image: string;
 }
 
 export const CarSchema = SchemaFactory.createForClass(Car);

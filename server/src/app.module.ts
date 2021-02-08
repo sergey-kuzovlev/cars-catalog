@@ -2,6 +2,8 @@ import { Module } from '@nestjs/common';
 
 import { MongooseModule } from '@nestjs/mongoose';
 import { CarsModule } from './cars/cars.module';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 import * as dotenv from 'dotenv';
 
 dotenv.config();
@@ -17,6 +19,10 @@ dotenv.config();
       }),
     }),
     CarsModule,
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'public'),
+      exclude: ['/api*'],
+    }),
   ],
 })
 export class AppModule {}
