@@ -10,7 +10,8 @@ export const setVisibilityFilter = (filter: string) => ({
   filter
 })
 
-export const VisibilityFilters = {
-  SHOW_ALL: 'SHOW_ALL',
-  SHOW_BMW: 'SHOW_BMW',
-}
+// export const setSorting = (sort: string) => ({
+//   type: 'SET_SORTING',
+//   sort
+// })
+

@@ -1,15 +1,22 @@
 import React from 'react'
 import FilterLink from '../../containers/FilterLink'
-import { VisibilityFilters } from '../../actions'
+import { connect } from 'react-redux'
 
-export const Filters: React.FC = () => (
-  <div>
-    <span>Show: </span>
-    <FilterLink filter={VisibilityFilters.SHOW_ALL}>
+export const Filters: React.FC<any> = ({makes}) => {
+
+  return (
+  <div className='filters'>
+    <FilterLink filter="all">
       All
     </FilterLink>
-    <FilterLink filter={VisibilityFilters.SHOW_BMW}>
-      BMW
-    </FilterLink>
+    {makes && makes.map((make: string) => (
+      <FilterLink filter={make}>
+        {make}
+      </FilterLink>
+    ))}
+
   </div>
-)
+  );
+}
+
+export default connect()(Filters)
