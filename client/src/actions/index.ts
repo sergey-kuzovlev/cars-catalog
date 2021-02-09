@@ -10,8 +10,8 @@ export const setVisibilityFilter = (filter: string) => ({
   filter
 })
 
-// export const setSorting = (sort: string) => ({
-//   type: 'SET_SORTING',
-//   sort
-// })
+export const setSorting = (sort: string) => ({
+  type: 'SET_FFILTERS',
+  sort
+})
 

@@ -47,4 +47,10 @@
 
 .filters .btn {
   margin: 1px;
-} 
+}
+
+.brand-logo img {
+  height: 50px;
+  margin-top: 6px;
+  margin-left: 25px;
+}
