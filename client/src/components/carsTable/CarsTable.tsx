@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { loadCars } from "../../actions";
 import { ICar } from "../../interfaces/car.interface";
 import * as carService from "../../services/car.service";
-import SortLink from "../../containers/SortLink";
+import SortLink from "../../containers/Filters";
 
 export const CarsTable: React.FC<any> = ({cars, dispatch}) => {
   useEffect(() => {
@@ -21,7 +21,7 @@ export const CarsTable: React.FC<any> = ({cars, dispatch}) => {
         <div className="row">
           {cars && cars.filteredCars && cars.filteredCars.map((car: ICar) => (
             <Link 
-            className="col s3" 
+            className="col tile s3" 
             key={car._id} 
             to={`/car/${car._id}`} 
             style={{backgroundImage: `url(http://localhost:4000/${car.image ? car.image : "default.png"})`}}>

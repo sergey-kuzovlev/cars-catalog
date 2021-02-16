@@ -1,3 +1,4 @@
+import { SET_VISIBILITY_FILTER } from '../actions/types'
 import { IAction } from '../interfaces/car.interface'
 
 interface IActionFilter extends IAction { 
@@ -6,7 +7,7 @@ interface IActionFilter extends IAction {
 
 const visibilityFilter = (state = 'all', action: IActionFilter) => {
   switch (action.type) {
-    case 'SET_VISIBILITY_FILTER':
+    case SET_VISIBILITY_FILTER:
       return action.filter
     default:
       return state

@@ -9,12 +9,11 @@ export const Filters: React.FC<any> = ({makes}) => {
     <FilterLink filter="all">
       All
     </FilterLink>
-    {makes && makes.map((make: string) => (
-      <FilterLink filter={make}>
+    {makes && makes.map((make: string, index) => (
+      <FilterLink filter={make} key={index}>
         {make}
       </FilterLink>
     ))}
-
   </div>
   );
 }
