@@ -1,5 +1,5 @@
 import { SET_VISIBILITY_FILTER } from '../actions/types'
-import { IAction } from '../interfaces/car.interface'
+import { IAction } from '../interfaces/car.interface';
 
 interface IActionFilter extends IAction { 
   filter: string

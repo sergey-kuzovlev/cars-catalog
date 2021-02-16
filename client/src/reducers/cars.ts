@@ -1,5 +1,5 @@
-import { LOAD_CARS } from "../actions/types"
-import { ICar } from "../interfaces/car.interface"
+import { LOAD_CARS } from "../actions/types";
+import { ICar } from "../interfaces/car.interface";
 
 const cars = (state = [], action: {type: string, cars: ICar[]}) => {
   switch (action.type) {

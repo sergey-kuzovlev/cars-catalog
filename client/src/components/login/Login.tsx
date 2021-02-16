@@ -2,7 +2,7 @@ import jwtDecode from "jwt-decode";
 import React from "react";
 import { connect } from "react-redux";
 import { logout, setCurrentUser } from "../../actions/authActions";
-import { login } from "../../services/auth.service"
+import { login } from "../../services/auth.service";
 
 const initialFormData = {
   email: "",

@@ -8,7 +8,6 @@ import {
   Query,
 } from '@nestjs/common';
 import { CarsService } from './cars.service';
-import { CreateCarDto, UpdateCarDto } from './dto';
 import { PaginationQueryDto } from '../common/dto/pagination-query.dto';
 
 @Controller('api')
