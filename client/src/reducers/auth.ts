@@ -7,7 +7,7 @@ import {
 
 const token = localStorage.getItem("jwtToken");
 
-const initialState = token
+const initialState = token && token !== "undefined"
   ? { isLoggedIn: true, token, user: jwtDecode(token) }
   : { isLoggedIn: false, token: null };
 

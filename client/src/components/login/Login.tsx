@@ -3,7 +3,9 @@ import React from "react";
 import { connect } from "react-redux";
 import { logout, setCurrentUser } from "../../actions/authActions";
 import { login } from "../../services/auth.service";
+import Notification from "./Notification";
 
+const initialMessage = "";
 const initialFormData = {
   email: "",
   password: ""
@@ -11,8 +13,7 @@ const initialFormData = {
 
 export const Login: React.FC<any> = ({dispatch, history}) => {
   const [formData, updateFormData] = React.useState(initialFormData);
-
-  dispatch(logout());
+  const [message, updateMessage] = React.useState(initialMessage);
 
   const handleChange = (e) => {
     updateFormData({
@@ -23,19 +24,23 @@ export const Login: React.FC<any> = ({dispatch, history}) => {
   };
 
   const handleSubmit = async () => {
-    const token = await login(formData);
+    const { accessToken, error} = await login(formData);
 
-    if(token) {
-      dispatch(setCurrentUser(jwtDecode(token)));
+    if(accessToken) {
+      updateMessage("")
+      dispatch(setCurrentUser(jwtDecode(accessToken)));
       history.push("/")
+    } else {
+      updateMessage(error)
     }
-    
-    // return <Redirect to='/' />
   }
 
   return (
     <div className="container">
       <h4>Login</h4>
+      {
+        message ? <Notification text={message}/> : ''
+      }
       <div className="row">
         <div className="row">
           <div className="input-field col s6">

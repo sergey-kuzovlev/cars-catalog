@@ -2166,6 +2166,11 @@
         "signature": "e20c32874461044c396be8f8ae3e0809c692248b8eb5ed619bd2fd0e81c38ad3",
         "affectsGlobalScope": false
       },
+      "./src/users/users.service.ts": {
+        "version": "c5be905c53b06a1562dd272ffeb5622a347817e9a9431f8242713afb9bc11ca8",
+        "signature": "38f14af2ff22b6a97c70038d455e0eb4241c0fea2f350500f24496383e494e0c",
+        "affectsGlobalScope": false
+      },
       "./node_modules/@types/bcrypt/index.d.ts": {
         "version": "18b9a9702d2fc7d3766b0c8124133c761ad25a9d767925005777eb2c2cd8aeba",
         "signature": "18b9a9702d2fc7d3766b0c8124133c761ad25a9d767925005777eb2c2cd8aeba",
@@ -2176,14 +2181,9 @@
         "signature": "f67c920eba6ab8e4558cb9ab661d900188f101c5657e19b1e15829a1d491d46e",
         "affectsGlobalScope": false
       },
-      "./src/users/users.service.ts": {
-        "version": "61376635d05e6ac9f4f0252c4312e12ada179df95e908275ec03f87612d73763",
-        "signature": "37a7999562756997328690c438d5f2a337e7e773fa9f793d9f10da62d1cf56cd",
-        "affectsGlobalScope": false
-      },
       "./src/users/users.controller.ts": {
-        "version": "6b6a74c5fd6b6b83c4fa955096aaf6c0287effff9b4f23a55d493b1458997d45",
-        "signature": "36dc8c5f38cf490d7873591d6aedc24036697177bc885a4af96ebec2482b0262",
+        "version": "26fa94a969aca26321e93a51b26518cd21cb49c83f615317444ad98fa0c11b0a",
+        "signature": "c886809576251117c981e2d80cd2ad13a0b4e5039730b2c887c35654cb5bc0a4",
         "affectsGlobalScope": false
       },
       "./src/users/users.module.ts": {
@@ -4789,6 +4789,8 @@
       ],
       "./src/users/users.controller.ts": [
         "./node_modules/@nestjs/common/index.d.ts",
+        "./node_modules/@types/bcrypt/index.d.ts",
+        "./node_modules/@types/jsonwebtoken/index.d.ts",
         "./src/users/users.service.ts"
       ],
       "./src/users/users.module.ts": [
@@ -4801,8 +4803,6 @@
       "./src/users/users.service.ts": [
         "./node_modules/@nestjs/common/index.d.ts",
         "./node_modules/@nestjs/mongoose/index.d.ts",
-        "./node_modules/@types/bcrypt/index.d.ts",
-        "./node_modules/@types/jsonwebtoken/index.d.ts",
         "./node_modules/mongoose/index.d.ts",
         "./src/users/schemas/user.schema.ts"
       ]
