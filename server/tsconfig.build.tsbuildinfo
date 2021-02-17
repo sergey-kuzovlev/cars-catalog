@@ -2162,13 +2162,13 @@
         "affectsGlobalScope": false
       },
       "./src/users/schemas/user.schema.ts": {
-        "version": "85e0c494ffea7e0072dcc4462bb4f24a6351cd36ac4015bfd556e0c84473128c",
-        "signature": "e20c32874461044c396be8f8ae3e0809c692248b8eb5ed619bd2fd0e81c38ad3",
+        "version": "d249d8db69324f0eabb877641bf0f2eee4baabf12d250107b4eaa57803c86c55",
+        "signature": "f9f18e84e2364e0b3ff6d2da996bee4c1dcf604102e83efa73377300ed3b6b78",
         "affectsGlobalScope": false
       },
       "./src/users/users.service.ts": {
-        "version": "c5be905c53b06a1562dd272ffeb5622a347817e9a9431f8242713afb9bc11ca8",
-        "signature": "38f14af2ff22b6a97c70038d455e0eb4241c0fea2f350500f24496383e494e0c",
+        "version": "fd14e24008e6c0ebcdd32dc465bab9710540513b0bd8cc22a33360504cd774a5",
+        "signature": "f538810477311ec6fd61fd6acd3a51323ade0c7693ef86feefcb40985504874f",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/bcrypt/index.d.ts": {
@@ -2181,8 +2181,13 @@
         "signature": "f67c920eba6ab8e4558cb9ab661d900188f101c5657e19b1e15829a1d491d46e",
         "affectsGlobalScope": false
       },
+      "./node_modules/moment/ts3.1-typings/moment.d.ts": {
+        "version": "f97edc4d3b4dd0b32766e9633086497565c37657fb591cc84a35864db4bc2fc5",
+        "signature": "f97edc4d3b4dd0b32766e9633086497565c37657fb591cc84a35864db4bc2fc5",
+        "affectsGlobalScope": false
+      },
       "./src/users/users.controller.ts": {
-        "version": "26fa94a969aca26321e93a51b26518cd21cb49c83f615317444ad98fa0c11b0a",
+        "version": "4a47c196311223984aff88a9e496ab9c5e79f1d4c238621673fdf8e7f9e81832",
         "signature": "c886809576251117c981e2d80cd2ad13a0b4e5039730b2c887c35654cb5bc0a4",
         "affectsGlobalScope": false
       },
@@ -4791,6 +4796,7 @@
         "./node_modules/@nestjs/common/index.d.ts",
         "./node_modules/@types/bcrypt/index.d.ts",
         "./node_modules/@types/jsonwebtoken/index.d.ts",
+        "./node_modules/moment/ts3.1-typings/moment.d.ts",
         "./src/users/users.service.ts"
       ],
       "./src/users/users.module.ts": [
@@ -8541,6 +8547,7 @@
       "./node_modules/jest-diff/build/index.d.ts",
       "./node_modules/jest-diff/build/printdiffs.d.ts",
       "./node_modules/jest-diff/build/types.d.ts",
+      "./node_modules/moment/ts3.1-typings/moment.d.ts",
       "./node_modules/mongoose/index.d.ts",
       "./node_modules/pretty-format/build/index.d.ts",
       "./node_modules/pretty-format/build/types.d.ts",

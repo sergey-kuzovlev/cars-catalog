@@ -4,6 +4,8 @@ export interface IUser {
   passwordHash: string;
   role: string;
   username: string;
+  accessToken: string;
+  tokenExpires: string;
 }
 
 export interface IAuth {
