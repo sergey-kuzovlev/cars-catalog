@@ -1,7 +1,7 @@
 import jwtDecode from "jwt-decode";
 import React from "react";
 import { connect } from "react-redux";
-import { logout, setCurrentUser } from "../../actions/authActions";
+import { setCurrentUser } from "../../actions/authActions";
 import { login } from "../../services/auth.service";
 import Notification from "./Notification";
 

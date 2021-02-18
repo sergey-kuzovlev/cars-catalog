@@ -17,6 +17,10 @@ const logout = () => {
   setAuthorizationToken(false);
 };
 
+const registration = (data) => {
+  return axios.post(`${API_URL}registration`, data)
+}
+
 const checkAuthToken = async(token): Promise<boolean> => {
   return axios.get(`${API_URL}checktoken?token=${token}`)
 }
@@ -25,4 +29,5 @@ export {
   login,
   logout,
   checkAuthToken,
+  registration,
 };

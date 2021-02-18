@@ -6,6 +6,7 @@ import { Navbar } from './components/navbar/Navbar';
 import { createBrowserHistory } from 'history';
 import FilteredCars from './containers/FilteredCarsList';
 import Login from './components/login/Login';
+import { Registration } from './components/registration/Registration';
 
 const history = createBrowserHistory();
 
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/" component={FilteredCars} />
         <Route path="/car/:id" component={CarDetailPage} />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/registration" component={Registration} />
       </Switch>
     </Router>
   </div>

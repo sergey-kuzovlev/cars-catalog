@@ -45,7 +45,7 @@ export const Navbar: React.FC<any> = ({dispatch}) => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to={"/register"} className="nav-link">
+                <Link to={"/registration"} className="nav-link">
                   Sign Up
                 </Link>
               </li>
