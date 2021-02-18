@@ -5,45 +5,33 @@ import {
   NotFoundException,
   Post,
   Body,
+  Param,
+  Get,
+  Query,
 } from '@nestjs/common';
 import { UsersService } from './users.service';
-import * as bcrypt from 'bcrypt';
-import * as jwt from "jsonwebtoken";
-import * as moment from 'moment'
 
 @Controller('api')
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
-  @Post('/auth')
+  @Post('/login')
   public async getAuthToken(
     @Res() res,
     @Body() body
   ) {
-    const {email, password} = body;
-    const user = await this.usersService.findOneByField({email});
+    const result = await this.usersService.login(body)
 
-    let accessToken: string | false;
-    let message: string = "Incorrect username or password";
+    return res.send({accessToken: result})
+  }
 
-    if(user) {
-      if(await bcrypt.compare(password, user.passwordHash)) {
-        delete user.accessToken;
-        accessToken = jwt.sign(JSON.stringify(user), 'secret')
+  @Get('/checktoken')
+  public async checkAuthToken(
+    @Res() res,
+    @Query() query
+    ) {
+    const result = await this.usersService.checkAuthToken(query)
 
-        await this.usersService.updateUser(         //TODO: rewrite to .save()
-          user.email, 
-          {
-            accessToken, 
-            tokenExpires: moment().add(5, 'days').format("DD-MM-YYYY")
-          })
-      } else {
-        accessToken = false;
-      }
-    }
-
-    return accessToken ?
-      res.status(HttpStatus.OK).json({ accessToken }) :
-      res.status(HttpStatus.OK).json({ error: message })
+    return res.send({isValid: result})
   }
 }

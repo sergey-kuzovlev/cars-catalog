@@ -1526,6 +1526,11 @@
         "signature": "740eb1776ea3af259309fc08a812849b23bae6121a1f8b8138fc5a5a8a5264cb",
         "affectsGlobalScope": false
       },
+      "./src/cars/cars.service.ts": {
+        "version": "1391d99640acdb1ce85be1e5762e7887c64e59b8e3e57308c2f6b85a023504ed",
+        "signature": "047b88b1f84d387983a80ff4b39c58ccee6e82eee1427309793b227ba1ef0e37",
+        "affectsGlobalScope": false
+      },
       "./node_modules/class-validator/types/validation/validationerror.d.ts": {
         "version": "d224f2ef464cf2a544dcf6be6b416db5563aa5ca4c94e2a1d93bf3765c1f77cb",
         "signature": "d224f2ef464cf2a544dcf6be6b416db5563aa5ca4c94e2a1d93bf3765c1f77cb",
@@ -2146,14 +2151,9 @@
         "signature": "5f42ab6924b5398345d433eb7b6624f4856ac2fccaf8b81496b06cfe9aad0934",
         "affectsGlobalScope": false
       },
-      "./src/cars/cars.service.ts": {
-        "version": "a9dca4f9299feb274adbbd351f3678b4dfbf1fe0225f1492260572ef5d68328d",
-        "signature": "cf0ee793b4ab104c635fe509bb8c549ccea5d15025a7771d2c140556fb978152",
-        "affectsGlobalScope": false
-      },
       "./src/cars/cars.controller.ts": {
-        "version": "c0db4102975169fe97631cc4888411fbd86419a63596aa042455c6151418fb2c",
-        "signature": "679bbd1728b478fcb0664a56fea5b705297bd60edaa7aac4eb34a4021d079873",
+        "version": "58e6c97e860286ebb41202decbe8924fa7ebdcd6b27e29d7abaebf0fd7c40b3f",
+        "signature": "c5053605b5517637c48a87dc3c460e1d89069552ae6c370aec79ece5edd89bfa",
         "affectsGlobalScope": false
       },
       "./src/cars/cars.module.ts": {
@@ -2166,9 +2166,9 @@
         "signature": "f9f18e84e2364e0b3ff6d2da996bee4c1dcf604102e83efa73377300ed3b6b78",
         "affectsGlobalScope": false
       },
-      "./src/users/users.service.ts": {
-        "version": "fd14e24008e6c0ebcdd32dc465bab9710540513b0bd8cc22a33360504cd774a5",
-        "signature": "f538810477311ec6fd61fd6acd3a51323ade0c7693ef86feefcb40985504874f",
+      "./node_modules/moment/ts3.1-typings/moment.d.ts": {
+        "version": "f97edc4d3b4dd0b32766e9633086497565c37657fb591cc84a35864db4bc2fc5",
+        "signature": "f97edc4d3b4dd0b32766e9633086497565c37657fb591cc84a35864db4bc2fc5",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/bcrypt/index.d.ts": {
@@ -2181,14 +2181,14 @@
         "signature": "f67c920eba6ab8e4558cb9ab661d900188f101c5657e19b1e15829a1d491d46e",
         "affectsGlobalScope": false
       },
-      "./node_modules/moment/ts3.1-typings/moment.d.ts": {
-        "version": "f97edc4d3b4dd0b32766e9633086497565c37657fb591cc84a35864db4bc2fc5",
-        "signature": "f97edc4d3b4dd0b32766e9633086497565c37657fb591cc84a35864db4bc2fc5",
+      "./src/users/users.service.ts": {
+        "version": "2e6599cef6017e73106195f60f9159ba10eb97cb2f8455ab170f921729838709",
+        "signature": "6e37395f0a17f0cb5ca3af2c1c545aa2c56cb31748b6c8705e98b992a515029e",
         "affectsGlobalScope": false
       },
       "./src/users/users.controller.ts": {
-        "version": "4a47c196311223984aff88a9e496ab9c5e79f1d4c238621673fdf8e7f9e81832",
-        "signature": "c886809576251117c981e2d80cd2ad13a0b4e5039730b2c887c35654cb5bc0a4",
+        "version": "663af8e1fe68074bac35c7e65bbc3d0ac53ded035e72895cd391c23800ac76d1",
+        "signature": "5a190dd09cc9a22c19cf9396a05d664874dcf1426bd12bff91a8e3e5feddcfed",
         "affectsGlobalScope": false
       },
       "./src/users/users.module.ts": {
@@ -4762,8 +4762,7 @@
         "./node_modules/@nestjs/common/index.d.ts",
         "./node_modules/@nestjs/mongoose/index.d.ts",
         "./node_modules/mongoose/index.d.ts",
-        "./src/cars/schemas/car.schema.ts",
-        "./src/common/dto/pagination-query.dto.ts"
+        "./src/cars/schemas/car.schema.ts"
       ],
       "./src/cars/dto/create-car.dto.ts": [
         "./node_modules/class-validator/types/index.d.ts"
@@ -4794,9 +4793,6 @@
       ],
       "./src/users/users.controller.ts": [
         "./node_modules/@nestjs/common/index.d.ts",
-        "./node_modules/@types/bcrypt/index.d.ts",
-        "./node_modules/@types/jsonwebtoken/index.d.ts",
-        "./node_modules/moment/ts3.1-typings/moment.d.ts",
         "./src/users/users.service.ts"
       ],
       "./src/users/users.module.ts": [
@@ -4809,6 +4805,9 @@
       "./src/users/users.service.ts": [
         "./node_modules/@nestjs/common/index.d.ts",
         "./node_modules/@nestjs/mongoose/index.d.ts",
+        "./node_modules/@types/bcrypt/index.d.ts",
+        "./node_modules/@types/jsonwebtoken/index.d.ts",
+        "./node_modules/moment/ts3.1-typings/moment.d.ts",
         "./node_modules/mongoose/index.d.ts",
         "./src/users/schemas/user.schema.ts"
       ]
@@ -8071,13 +8070,11 @@
         "./node_modules/mongoose/index.d.ts"
       ],
       "./src/cars/cars.controller.ts": [
-        "./src/cars/cars.service.ts",
-        "./src/common/dto/pagination-query.dto.ts"
+        "./src/cars/cars.service.ts"
       ],
       "./src/cars/cars.service.ts": [
         "./node_modules/mongoose/index.d.ts",
-        "./src/cars/schemas/car.schema.ts",
-        "./src/common/dto/pagination-query.dto.ts"
+        "./src/cars/schemas/car.schema.ts"
       ],
       "./src/cars/dto/index.ts": [
         "./src/cars/dto/create-car.dto.ts",

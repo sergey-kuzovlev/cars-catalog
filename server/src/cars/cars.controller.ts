@@ -2,8 +2,6 @@ import {
   Controller,
   Get,
   Res,
-  HttpStatus,
-  NotFoundException,
   Param,
   Query,
 } from '@nestjs/common';
@@ -17,12 +15,11 @@ export class CarsController {
   @Get('/cars')
   public async getAllCar(
     @Res() res,
-    @Query() paginationQuery: PaginationQueryDto,
+    @Query() query,
   ) {
-    const cars = await this.carsService.findAll(
-      paginationQuery,
-    );
-    return res.status(HttpStatus.OK).json(cars);
+    const cars = await this.carsService.findAll();
+
+    return res.send(cars);
   }
 
   @Get('/car/:id')
@@ -30,12 +27,8 @@ export class CarsController {
     @Res() res,
     @Param('id') carId: string,
   ) {
-    const car = await this.carsService.findOne(
-      carId,
-    );
-    if (!car) {
-      throw new NotFoundException('car does not exist!');
-    }
-    return res.status(HttpStatus.OK).json(car);
+    const car = await this.carsService.findOne(carId);
+
+    return res.send(car);
   }
 }
