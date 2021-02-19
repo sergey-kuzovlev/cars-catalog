@@ -1,12 +1,12 @@
-import { ICar } from "../interfaces/car.interface";
-import { LOAD_CARS, SET_VISIBILITY_FILTER } from "./types";
+import { ICar } from "../components/car/types";
+import { actionTypes } from "./types";
 
-export const loadCars = (cars: ICar[]) => ({
-  type: LOAD_CARS,
+export const loadCars = (cars: ICar[]): { type: actionTypes, cars: ICar[] } => ({
+  type: actionTypes.LOAD_CARS,
   cars
 })
 
-export const setVisibilityFilter = (filter: string) => ({
-  type: SET_VISIBILITY_FILTER,
+export const setVisibilityFilter = (filter: string): { type: actionTypes, filter: string } => ({
+  type: actionTypes.SET_VISIBILITY_FILTER,
   filter
 })

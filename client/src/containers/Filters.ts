@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
-import { Filters } from '../components/carsTable/Filters';
+import { Filters } from '../components/car/Filters';
+import { IFilter } from '../components/car/types';
 
-const mapStateToProps = (state: {cars: any, visibilityFilter: string}): { makes: string[]} => ({
+const mapStateToProps = (state: IFilter): { makes: string[]} => ({
   makes: state.cars.makes
 })
 

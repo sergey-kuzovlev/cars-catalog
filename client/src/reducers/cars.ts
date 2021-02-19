@@ -1,9 +1,9 @@
-import { LOAD_CARS } from "../actions/types";
-import { ICar } from "../interfaces/car.interface";
+import { actionTypes } from "../actions/types";
+import { ICar, ICarTableState } from "../components/car/types";
 
-const cars = (state = [], action: {type: string, cars: ICar[]}) => {
+const cars = (state = {}, action: {type: actionTypes, cars: ICar[]}): ICarTableState | object => {
   switch (action.type) {
-    case LOAD_CARS:
+    case actionTypes.LOAD_CARS:
       const makes = action.cars.map((car: ICar) => (car.make))
       
       return {

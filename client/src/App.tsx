@@ -1,12 +1,12 @@
 import React from 'react';
 import { Route, Router, Switch } from 'react-router-dom';
 import './App.css';
-import CarDetailPage from './components/carDetails/CarDetailPage';
+import CarDetailPage from './components/car/CarDetailPage';
 import { Navbar } from './components/navbar/Navbar';
 import { createBrowserHistory } from 'history';
 import FilteredCars from './containers/FilteredCarsList';
-import Login from './components/login/Login';
-import { Registration } from './components/registration/Registration';
+import Login from './components/user/Login';
+import { Registration } from './components/user/Registration';
 
 const history = createBrowserHistory();
 

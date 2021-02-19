@@ -15,7 +15,7 @@ export const Login: React.FC<any> = ({dispatch, history}) => {
   const [formData, updateFormData] = React.useState(initialFormData);
   const [message, updateMessage] = React.useState(initialMessage);
 
-  const handleChange = (e) => {
+  const handleChange = (e): void => {
     updateFormData({
       ...formData,
   
@@ -23,7 +23,7 @@ export const Login: React.FC<any> = ({dispatch, history}) => {
     });
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (): Promise<void> => {
     const { accessToken, error} = await login(formData);
 
     if(accessToken) {

@@ -1,13 +1,9 @@
-import { SET_VISIBILITY_FILTER } from '../actions/types'
-import { IAction } from '../interfaces/car.interface';
+import { actionTypes } from '../actions/types'
+import { IActionFilter } from '../components/car/types';
 
-interface IActionFilter extends IAction { 
-  filter: string
-}
-
-const visibilityFilter = (state = 'all', action: IActionFilter) => {
+const visibilityFilter = (state = 'all', action: IActionFilter): string => {
   switch (action.type) {
-    case SET_VISIBILITY_FILTER:
+    case actionTypes.SET_VISIBILITY_FILTER:
       return action.filter
     default:
       return state

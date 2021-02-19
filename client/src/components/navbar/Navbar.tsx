@@ -3,14 +3,16 @@ import { connect, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { checkAuthToken, logout } from '../../services/auth.service';
 import logo from '../../logo.png';
-import { IAuth } from '../../interfaces/user.interface';
+import { IAuthState } from '../user/types';
+import { getToken } from '../../services/auth.service';
 
-export const Navbar: React.FC<any> = ({dispatch}) => {
-  const { auth } = useSelector((state: {auth: IAuth}) => state);
+export const Navbar: React.FC<any> = () => {
+  const { auth } = useSelector((state: IAuthState) => state);
 
   React.useEffect(() => {
     (async () => {
-      const token = localStorage.getItem("jwtToken");
+      const token = getToken()
+
       if(token || await checkAuthToken(token)) {
         logout()
       }

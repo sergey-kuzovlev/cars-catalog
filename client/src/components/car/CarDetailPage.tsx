@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { ICar, ICarDetailPageProps } from '../../interfaces/car.interface';
+import { ICar, ICarDetailPageProps } from './types';
 import * as carService from "../../services/car.service";
 
 const CarDetailPage: React.FC<ICarDetailPageProps> = (props)=> {
-  const {
-    params: { id },
-  } = props.match;
+  const { params: { id }} = props.match;
 
-  const defaultCarState = {
+  const defaultCarState: ICar = {
     _id: '',
     name: '',
     make: '',
@@ -16,11 +14,9 @@ const CarDetailPage: React.FC<ICarDetailPageProps> = (props)=> {
   }
 
   const [carDetails, setDetailsState] = useState<ICar>(defaultCarState)
-    useEffect(() => {
-      (async () => {
-        setDetailsState(await carService.getCarDetails(id))
-      })();
-  }, [id]);
+    useEffect(() => {(
+      async (): Promise<void> => (setDetailsState(await carService.getCarDetails(id)))
+    )()}, []);
 
   return (
     <div>

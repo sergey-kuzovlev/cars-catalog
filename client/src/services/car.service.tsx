@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ICar } from '../interfaces/car.interface';
+import { ICar } from '../components/car/types';
 
 const API_URL = 'http://localhost:4000/api/'
 

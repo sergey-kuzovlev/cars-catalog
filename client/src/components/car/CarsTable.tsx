@@ -2,17 +2,17 @@ import { useEffect } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { loadCars } from "../../actions";
-import { ICar } from "../../interfaces/car.interface";
+import { ICar } from "./types";
 import * as carService from "../../services/car.service";
 import SortLink from "../../containers/Filters";
 
 export const CarsTable: React.FC<any> = ({cars, dispatch}) => {
-  useEffect(() => {
-    carService.getCarsList()
-    .then((cars: ICar[]) => {
+  useEffect(() => {(
+    async (): Promise<void> => {
+      const cars = await carService.getCarsList()
       dispatch(loadCars(cars))
-    })
-  }, [dispatch]);
+    }
+  )()}, []);
 
   return (
     <div className="container px1">

@@ -1,12 +1,11 @@
-import jwtDecode from "jwt-decode";
 import React from "react";
 import { connect } from "react-redux";
-import { setCurrentUser } from "../../actions/authActions";
-import { registration } from "../../services/auth.service";
-import Notification from "../login/Notification";
+import { ILogin } from "./types";
+// import { registration } from "../../services/auth.service";
+import Notification from "./Notification";
 
-const initialMessage = "";
-const initialFormData = {
+const initialMessage: string = "";
+const initialFormData: ILogin = {
   email: "",
   password: ""
 };
@@ -15,7 +14,7 @@ export const Registration: React.FC<any> = ({dispatch, history}) => {
   const [formData, updateFormData] = React.useState(initialFormData);
   const [message, updateMessage] = React.useState(initialMessage);
 
-  const handleChange = (e) => {
+  const handleChange = (e): void => {
     validate(e.target)
     updateFormData({
       ...formData,
@@ -24,7 +23,7 @@ export const Registration: React.FC<any> = ({dispatch, history}) => {
     });
   };
 
-  const validate = (element) => {
+  const validate = (element): void => {
     console.log(formData, element.name)
     switch (element.name) {
       case "email":
@@ -52,7 +51,7 @@ export const Registration: React.FC<any> = ({dispatch, history}) => {
   }
 
   const handleSubmit = async () => {
-    const result = await registration(formData);
+    // const result = await registration(formData);
 
     //const { accessToken, error} = await login(formData);
 
