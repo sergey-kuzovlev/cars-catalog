@@ -12,8 +12,9 @@ export const Navbar: React.FC<any> = () => {
   React.useEffect(() => {
     (async () => {
       const token = getToken()
+      
 
-      if(token || await checkAuthToken(token)) {
+      if(token && !await checkAuthToken(token)) {
         logout()
       }
     })();

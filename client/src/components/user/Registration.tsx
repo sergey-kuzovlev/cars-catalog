@@ -1,8 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 import { ILogin } from "./types";
-// import { registration } from "../../services/auth.service";
+import { registration } from "../../services/auth.service";
 import Notification from "./Notification";
+import { email } from "./reg.exp";
 
 const initialMessage: string = "";
 const initialFormData: ILogin = {
@@ -28,7 +29,7 @@ export const Registration: React.FC<any> = ({dispatch, history}) => {
     switch (element.name) {
       case "email":
         console.log('email')
-        const reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const reg = email;
         if(!reg.test(String(element.value).toLowerCase())) updateMessage('Please insert a valid email address')
         else updateMessage('')
         break;
@@ -52,16 +53,6 @@ export const Registration: React.FC<any> = ({dispatch, history}) => {
 
   const handleSubmit = async () => {
     // const result = await registration(formData);
-
-    //const { accessToken, error} = await login(formData);
-
-    // if(accessToken) {
-    //   updateMessage("")
-    //   dispatch(setCurrentUser(jwtDecode(accessToken)));
-    //   history.push("/")
-    // } else {
-    //   updateMessage(error)
-    // }
   }
 
   return (

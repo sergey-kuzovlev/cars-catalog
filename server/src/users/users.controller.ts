@@ -34,4 +34,15 @@ export class UsersController {
 
     return res.send({isValid: result})
   }
+
+  @Post('/registration')
+  public async registration(
+    @Res() res,
+    @Body() body
+    ) {
+    console.log('body', body)
+    const result = await this.usersService.registration(body)
+
+    return res.send({accessToken: result})
+  }
 }

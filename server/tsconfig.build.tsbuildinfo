@@ -1427,13 +1427,13 @@
         "affectsGlobalScope": false
       },
       "./node_modules/@types/mongodb/index.d.ts": {
-        "version": "52a2350f36cdad787e4b6342abf62282e7c7bafcdd954c538f0e75adeb736a5e",
-        "signature": "52a2350f36cdad787e4b6342abf62282e7c7bafcdd954c538f0e75adeb736a5e",
+        "version": "cdcaff91efe06dc77ea5e8b3672fd6ae722c91ad4bf804ea4f5017714abf7084",
+        "signature": "cdcaff91efe06dc77ea5e8b3672fd6ae722c91ad4bf804ea4f5017714abf7084",
         "affectsGlobalScope": false
       },
       "./node_modules/mongoose/index.d.ts": {
-        "version": "b85c2335d1c794d23dcee29b186b7ab2cb157813266ab6047f16adedd825e6fb",
-        "signature": "b85c2335d1c794d23dcee29b186b7ab2cb157813266ab6047f16adedd825e6fb",
+        "version": "1269612d8972d8501915c700c171a65a33800706ea20b8ea98aad005aa461fdc",
+        "signature": "1269612d8972d8501915c700c171a65a33800706ea20b8ea98aad005aa461fdc",
         "affectsGlobalScope": false
       },
       "./node_modules/@nestjs/mongoose/dist/decorators/prop.decorator.d.ts": {
@@ -1523,7 +1523,7 @@
       },
       "./src/cars/schemas/car.schema.ts": {
         "version": "083ecfbd6ae68d5f9bfa13f48d6180b006c018e83dd0b8f7049e2d8b5ead8d7e",
-        "signature": "740eb1776ea3af259309fc08a812849b23bae6121a1f8b8138fc5a5a8a5264cb",
+        "signature": "a5dd6a2380201cfb241d8dcbe620a34994485341688c74fc66b2922ba4d78f52",
         "affectsGlobalScope": false
       },
       "./src/cars/cars.service.ts": {
@@ -2163,7 +2163,7 @@
       },
       "./src/users/schemas/user.schema.ts": {
         "version": "d249d8db69324f0eabb877641bf0f2eee4baabf12d250107b4eaa57803c86c55",
-        "signature": "f9f18e84e2364e0b3ff6d2da996bee4c1dcf604102e83efa73377300ed3b6b78",
+        "signature": "44e20cf7b88bb408d77d9a063e45c669aee9f0e1d65ec45a97437ee546a7ff04",
         "affectsGlobalScope": false
       },
       "./node_modules/moment/ts3.1-typings/moment.d.ts": {
@@ -2182,13 +2182,13 @@
         "affectsGlobalScope": false
       },
       "./src/users/users.service.ts": {
-        "version": "2e6599cef6017e73106195f60f9159ba10eb97cb2f8455ab170f921729838709",
-        "signature": "6e37395f0a17f0cb5ca3af2c1c545aa2c56cb31748b6c8705e98b992a515029e",
+        "version": "c09beb54ae03ac7e3de607bfab74b748e08e0be28c71c3f08e8eb7553e30daa1",
+        "signature": "594eb4d1bf24d2aaeccb014e560999178c3e179885be084abc9dd020002e7574",
         "affectsGlobalScope": false
       },
       "./src/users/users.controller.ts": {
-        "version": "663af8e1fe68074bac35c7e65bbc3d0ac53ded035e72895cd391c23800ac76d1",
-        "signature": "5a190dd09cc9a22c19cf9396a05d664874dcf1426bd12bff91a8e3e5feddcfed",
+        "version": "152bf4124c4779e374749d74fbf1df4e4a8d99bbc1e53da004ed1dec4959edd7",
+        "signature": "f921a1ddbd8841d312ecf95716cdd97dc04dfb112551cc72c608d8d74e4b4139",
         "affectsGlobalScope": false
       },
       "./src/users/users.module.ts": {
@@ -6212,12 +6212,10 @@
       ],
       "./node_modules/@types/mongodb/index.d.ts": [
         "./node_modules/@types/bson/index.d.ts",
-        "./node_modules/@types/mongoose/index.d.ts",
         "./node_modules/@types/node/events.d.ts",
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/@types/node/stream.d.ts",
-        "./node_modules/@types/node/tls.d.ts",
-        "./node_modules/mongoose/index.d.ts"
+        "./node_modules/@types/node/tls.d.ts"
       ],
       "./node_modules/@types/node/assert.d.ts": [
         "./node_modules/@types/mongoose/index.d.ts",
@@ -7476,7 +7474,6 @@
       ],
       "./node_modules/mongoose/index.d.ts": [
         "./node_modules/@types/mongodb/index.d.ts",
-        "./node_modules/@types/mongoose/index.d.ts",
         "./node_modules/@types/node/events.d.ts",
         "./node_modules/@types/node/stream.d.ts",
         "./node_modules/mongoose/index.d.ts"

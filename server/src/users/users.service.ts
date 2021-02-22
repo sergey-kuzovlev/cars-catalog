@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { Model } from 'mongoose';
+import { Model, Mongoose } from 'mongoose';
+import * as mongoose from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { User } from './schemas/user.schema';
 import * as moment from 'moment';
@@ -64,5 +65,26 @@ export class UsersService {
     }
 
     return false
+  }
+
+  public async registration(data) {
+    
+
+    const { email, password, username, role } = data;
+
+    console.log(this.userModel)
+
+    const user = await this.userModel.create({
+      _id: new mongoose.Types.ObjectId(),
+      username,
+      email,
+      role
+    })
+
+    console.log(user);
+  }
+
+  private generateToken(data) {
+    jwt.sign(JSON.stringify(data), 'secret')
   }
 }
