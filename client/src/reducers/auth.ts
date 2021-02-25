@@ -1,4 +1,3 @@
-import jwtDecode from "jwt-decode";
 import { actionTypes } from "../actions/types";
 import { IUser } from "../components/user/types";
 import { getCurrentUser } from "../services/auth.service";
