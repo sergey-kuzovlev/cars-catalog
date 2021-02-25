@@ -40,7 +40,6 @@ export class UsersController {
     @Res() res,
     @Body() body
     ) {
-    console.log('body', body)
     const result = await this.usersService.registration(body)
 
     return res.send({accessToken: result})

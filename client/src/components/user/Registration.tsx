@@ -24,10 +24,8 @@ export const Registration: React.FC<any> = ({dispatch, history}) => {
   };
 
   const validate = (element): void => {
-    console.log(formData, element.name)
     switch (element.name) {
       case "email":
-        console.log('email')
         const reg = email;
         if(!reg.test(String(element.value).toLowerCase())) updateMessage('Please insert a valid email address')
         else updateMessage('')
@@ -41,12 +39,11 @@ export const Registration: React.FC<any> = ({dispatch, history}) => {
         else updateMessage('')
         break;
       case "confirm":
-        console.log(element.value, formData.password)
         if(element.value !== formData.password) updateMessage('Confirm password does not match')
         else updateMessage('')
         break;
-      default: 
-        console.log(element.name)
+      default:
+        break;
     }
   }
 
