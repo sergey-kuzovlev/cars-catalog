@@ -26,16 +26,12 @@ const checkAuthToken = async(token): Promise<boolean> => {
   return axios.get(`${API_URL}checktoken?token=${token}`)
 }
 
-const getToken = () => {
-  const user = JSON.parse(localStorage.getItem("current_user") || '{}')
-
-  return user.accessToken
-}
+const getCurrentUser = () => (JSON.parse(localStorage.getItem("current_user") || '{}'))
 
 export {
   login,
   logout,
   checkAuthToken,
   registration,
-  getToken,
+  getCurrentUser,
 };

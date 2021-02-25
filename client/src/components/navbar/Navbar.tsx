@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom';
 import { checkAuthToken, logout } from '../../services/auth.service';
 import logo from '../../logo.png';
 import { IAuthState } from '../user/types';
-import { getToken } from '../../services/auth.service';
+import { getCurrentUser } from '../../services/auth.service';
 
 export const Navbar: React.FC<any> = () => {
   const { auth } = useSelector((state: IAuthState) => state);
 
   React.useEffect(() => {
     const getAuthToken = async () => {
-      const token = getToken();
-      if(token && !await checkAuthToken(token)) {
+      const { accessToken } = getCurrentUser();
+      if(accessToken && !await checkAuthToken(accessToken)) {
         logout()
       }
     };

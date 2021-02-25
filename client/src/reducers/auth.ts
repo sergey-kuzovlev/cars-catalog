@@ -1,12 +1,12 @@
 import jwtDecode from "jwt-decode";
 import { actionTypes } from "../actions/types";
 import { IUser } from "../components/user/types";
-import { getToken } from "../services/auth.service";
+import { getCurrentUser } from "../services/auth.service";
 
-const token = getToken();
+const currentUser = getCurrentUser();
 
-const initialState = token && token !== "undefined"
-  ? { isLoggedIn: true, token, user: jwtDecode(token) }
+const initialState = currentUser.accessToken && currentUser.accessToken !== "undefined"
+  ? { isLoggedIn: true, token: currentUser.accessToken, user: currentUser }
   : { isLoggedIn: false, token: null };
 
 const auth = (state = initialState, action: {type: actionTypes, payload: {user: IUser}}) => {
