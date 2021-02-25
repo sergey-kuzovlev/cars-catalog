@@ -16,7 +16,7 @@ const CarDetailPage: React.FC<ICarDetailPageProps> = (props)=> {
   const [carDetails, setDetailsState] = useState<ICar>(defaultCarState)
     useEffect(() => {(
       async (): Promise<void> => (setDetailsState(await carService.getCarDetails(id)))
-    )()}, []);
+    )()}, [id]);
 
   return (
     <div>

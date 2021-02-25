@@ -1,19 +1,20 @@
 import axios from "axios";
+import { IUser } from "../components/user/types";
 import setAuthorizationToken from "./setAuthorizationToken";
 
 const API_URL = 'http://localhost:4000/api/';
 
-const login = async (data): Promise<{accessToken: string, error: string}> => {
-  const { data: { accessToken, error }} = await axios.post(`${API_URL}login`, data)
+const login = async (data): Promise<{user: IUser, error: string}> => {
+  const { data: { user, error }} = await axios.post(`${API_URL}login`, data)
 
-  localStorage.setItem('jwtToken', accessToken);
-  setAuthorizationToken(accessToken);
+  localStorage.setItem('current_user', JSON.stringify(user));
+  setAuthorizationToken(user.accessToken);
 
-  return { accessToken, error }
+  return { user, error }
 };
 
 const logout = (): void => {
-  localStorage.removeItem('jwtToken');
+  localStorage.removeItem('current_user');
   setAuthorizationToken(false);
 };
 
@@ -26,7 +27,9 @@ const checkAuthToken = async(token): Promise<boolean> => {
 }
 
 const getToken = () => {
-  return localStorage.getItem("jwtToken");
+  const user = JSON.parse(localStorage.getItem("current_user") || '{}')
+
+  return user.accessToken
 }
 
 export {

@@ -11,20 +11,25 @@ const initialFormData = {
   password: ""
 };
 
+enum Fields {
+  Password = 'password',
+  Email = 'email'
+}
+
 export const Login: React.FC<any> = ({dispatch, history}) => {
   const [formData, updateFormData] = React.useState(initialFormData);
   const [message, updateMessage] = React.useState(initialMessage);
 
-  const handleChange = (e): void => {
+  const handleChange = (fieldName: Fields) => (e) => {
     updateFormData({
       ...formData,
-  
-      [e.target.name]: e.target.value.trim()
+
+      [fieldName]: e.target.value.trim()
     });
   };
 
   const handleSubmit = async (): Promise<void> => {
-    const { accessToken, error} = await login(formData);
+    const { user: { accessToken }, error} = await login(formData);
 
     if(accessToken) {
       updateMessage("")
@@ -44,13 +49,13 @@ export const Login: React.FC<any> = ({dispatch, history}) => {
       <div className="row">
         <div className="row">
           <div className="input-field col s6">
-            <input id="email" type="email" className="validate" name="email" onChange={handleChange}/>
+            <input id="email" type="email" className="validate" name={Fields.Email} onChange={handleChange(Fields.Email)}/>
             <label htmlFor="email">Email</label>
           </div>
         </div>
         <div className="row">
           <div className="input-field col s6">
-            <input id="password" type="password" className="validate" name="password" onChange={handleChange}/>
+            <input id="password" type="password" className="validate" name={Fields.Password} onChange={handleChange(Fields.Password)}/>
             <label htmlFor="password">Password</label>
           </div>
         </div>

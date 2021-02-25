@@ -1,7 +1,6 @@
 import React from 'react';
 import FilterLink from '../../containers/FilterLink';
 import { connect } from 'react-redux';
-import { ICar } from './types';
 
 export const Filters: React.FC<any> = ({makes}) => {
 

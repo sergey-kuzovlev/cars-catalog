@@ -22,7 +22,7 @@ export class UsersController {
   ) {
     const result = await this.usersService.login(body)
 
-    return res.send({accessToken: result})
+    return res.send({user: result})
   }
 
   @Get('/checktoken')

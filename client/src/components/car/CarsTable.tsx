@@ -12,7 +12,7 @@ export const CarsTable: React.FC<any> = ({cars, dispatch}) => {
       const cars = await carService.getCarsList()
       dispatch(loadCars(cars))
     }
-  )()}, []);
+  )()}, [dispatch]);
 
   return (
     <div className="container px1">

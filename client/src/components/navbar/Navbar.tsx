@@ -10,14 +10,14 @@ export const Navbar: React.FC<any> = () => {
   const { auth } = useSelector((state: IAuthState) => state);
 
   React.useEffect(() => {
-    (async () => {
-      const token = getToken()
-      
-
+    const getAuthToken = async () => {
+      const token = getToken();
       if(token && !await checkAuthToken(token)) {
         logout()
       }
-    })();
+    };
+
+    getAuthToken()
   }, []);
 
   return (

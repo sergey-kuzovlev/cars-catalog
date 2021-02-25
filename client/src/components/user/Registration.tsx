@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import { ILogin } from "./types";
-import { registration } from "../../services/auth.service";
 import Notification from "./Notification";
 import { email } from "./reg.exp";
 

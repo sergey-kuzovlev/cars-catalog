@@ -1,11 +1,11 @@
 export interface IUser {
   _id: string;
   email: string;
-  passwordHash: string;
   role: string;
   username: string;
-  accessToken: string;
   tokenExpires: string;
+  accessToken?: string;
+  passwordHash?: string;
 }
 
 export interface IAuthState

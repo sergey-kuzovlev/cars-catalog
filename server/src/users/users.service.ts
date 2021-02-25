@@ -34,13 +34,14 @@ export class UsersService {
   }
 
   public async login(userData) {  
-    const user = await this.userModel.findOne({email: userData.email})
+    const user = await this.userModel.findOne({email: userData.email}).lean()
 
     let accessToken;
 
     if(user) {
       if(await bcrypt.compare(userData.password, user.passwordHash)) {
         delete user.accessToken;
+        delete user.passwordHash;
         accessToken = jwt.sign(JSON.stringify(user), 'secret')
 
         await this.userModel.findOneAndUpdate({email: user.email}, {
@@ -52,7 +53,10 @@ export class UsersService {
       }
     }
     
-    return accessToken
+    return {
+      ...user,
+      accessToken
+    }
   }
 
   public async checkAuthToken(data) {
@@ -68,11 +72,7 @@ export class UsersService {
   }
 
   public async registration(data) {
-    
-
     const { email, password, username, role } = data;
-
-    console.log(this.userModel)
 
     const user = await this.userModel.create({
       _id: new mongoose.Types.ObjectId(),
@@ -80,8 +80,6 @@ export class UsersService {
       email,
       role
     })
-
-    console.log(user);
   }
 
   private generateToken(data) {

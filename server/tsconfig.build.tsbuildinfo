@@ -2182,12 +2182,12 @@
         "affectsGlobalScope": false
       },
       "./src/users/users.service.ts": {
-        "version": "c09beb54ae03ac7e3de607bfab74b748e08e0be28c71c3f08e8eb7553e30daa1",
-        "signature": "594eb4d1bf24d2aaeccb014e560999178c3e179885be084abc9dd020002e7574",
+        "version": "d9576454afe0ed95da839603c7f8db655965ccd4e164f9b18946ea126df681fb",
+        "signature": "fdb7bc4fa0639cae68d5ad35b6ca37d25125b29afba42ec4b283d45f38250290",
         "affectsGlobalScope": false
       },
       "./src/users/users.controller.ts": {
-        "version": "152bf4124c4779e374749d74fbf1df4e4a8d99bbc1e53da004ed1dec4959edd7",
+        "version": "c0f85c836b5389f42ad6fc7e321a6a0f2f15ffa2ac837994442f03176a7c93f5",
         "signature": "f921a1ddbd8841d312ecf95716cdd97dc04dfb112551cc72c608d8d74e4b4139",
         "affectsGlobalScope": false
       },
