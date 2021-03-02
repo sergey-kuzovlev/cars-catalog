@@ -73,7 +73,7 @@
   color: RED;
 }
 
-.lang-dropdown .toggeleLang, .nav-link {
+.lang-dropdown .toggeleLang, .nav-link, .login-title {
   text-transform: capitalize;
 }
 

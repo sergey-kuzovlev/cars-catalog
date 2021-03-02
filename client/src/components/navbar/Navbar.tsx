@@ -59,7 +59,7 @@ export const Navbar: React.FC<{}> = () => {
               </li>
               <li className="nav-item">
                 <Link to={"/registration"} className="nav-link">
-                  {t("logout")}
+                  {t("signUp")}
                 </Link>
               </li>
             </div>            

@@ -1,5 +1,9 @@
 {
+  "email": "e-mail",
   "login": "login",
   "logout": "logout",
-  "shortLangName": "en"
+  "password": "password",
+  "shortLangName": "en",
+  "signUp": "sign up",
+  "submit": "submit"
 }

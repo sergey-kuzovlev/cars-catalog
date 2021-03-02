@@ -1,5 +1,9 @@
 {
+  "email": "e-mail",
   "login": "de connecter",
   "logout": "déconnexion",
-  "shortLangName": "fr"
+  "password": "mot de passe",
+  "shortLangName": "fr",
+  "signUp": "s'inscrire",
+  "submit": "soumettre"
 }

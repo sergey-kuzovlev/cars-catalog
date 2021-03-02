@@ -1,4 +1,4 @@
-export enum Fields {
+export enum FormFields {
   Password = 'password',
   Email = 'email'
 }
