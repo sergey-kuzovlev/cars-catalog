@@ -24,7 +24,7 @@ const CarDetailPage: React.FC<ICarDetailPageProps> = (props)=> {
       <div>{carDetails.year}</div>
       <div>{carDetails.name}</div>
     </div>
-  );
-};
+  )
+}
 
 export default CarDetailPage;

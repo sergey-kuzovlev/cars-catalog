@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import { setCurrentUser } from "../../actions/authActions";
 import { login } from "../../services/auth.service";
 import Notification from "./Notification";
+import { useTranslation } from "react-i18next";
+import { Fields } from "../navbar/types";
 
 const initialMessage = "";
 const initialFormData = {
@@ -11,12 +13,9 @@ const initialFormData = {
   password: ""
 };
 
-enum Fields {
-  Password = 'password',
-  Email = 'email'
-}
-
 export const Login: React.FC<any> = ({dispatch, history}) => {
+  const { t } = useTranslation();
+
   const [formData, updateFormData] = React.useState(initialFormData);
   const [message, updateMessage] = React.useState(initialMessage);
 
@@ -42,7 +41,7 @@ export const Login: React.FC<any> = ({dispatch, history}) => {
 
   return (
     <div className="container">
-      <h4>Login</h4>
+      <h4>{t("login")}</h4>
       {
         message ? <Notification text={message}/> : ''
       }
@@ -62,7 +61,7 @@ export const Login: React.FC<any> = ({dispatch, history}) => {
         <button className="btn waves-effect waves-light" type="submit" name="action" onClick={handleSubmit}>Login</button>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default connect()(Login)

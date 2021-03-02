@@ -5,7 +5,7 @@ const Notification = ({ text }) => {
       {text}
       </div>
     </div> 
-  );
+  )
 }
 
 export default Notification;

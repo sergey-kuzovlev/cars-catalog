@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Dispatch, useEffect } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { loadCars } from "../../actions";
@@ -6,7 +6,10 @@ import { ICar } from "./types";
 import * as carService from "../../services/car.service";
 import SortLink from "../../containers/Filters";
 
-export const CarsTable: React.FC<any> = ({cars, dispatch}) => {
+export const CarsTable: React.FC<{cars: {filteredCars: ICar[]}, dispatch: Dispatch<any>}> = ({cars, dispatch}) => {
+
+  console.log(dispatch);
+
   useEffect(() => {(
     async (): Promise<void> => {
       const cars = await carService.getCarsList()
@@ -33,7 +36,7 @@ export const CarsTable: React.FC<any> = ({cars, dispatch}) => {
         </div>
       )}
     </div>
-  );
+  )
 }
 
 export default connect()(CarsTable)

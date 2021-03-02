@@ -5,8 +5,12 @@ import { checkAuthToken, logout } from '../../services/auth.service';
 import logo from '../../logo.png';
 import { IAuthState } from '../user/types';
 import { getCurrentUser } from '../../services/auth.service';
+import { LangSwitcher } from './LangSwitcher';
+import { useTranslation } from "react-i18next";
 
-export const Navbar: React.FC<any> = () => {
+export const Navbar: React.FC<{}> = () => {
+  const { t } = useTranslation();
+
   const { auth } = useSelector((state: IAuthState) => state);
 
   React.useEffect(() => {
@@ -15,10 +19,10 @@ export const Navbar: React.FC<any> = () => {
       if(accessToken && !await checkAuthToken(accessToken)) {
         logout()
       }
-    };
+    }
 
     getAuthToken()
-  }, []);
+  }, [])
 
   return (
 		<nav className="blue-grey">
@@ -29,13 +33,16 @@ export const Navbar: React.FC<any> = () => {
           auth.isLoggedIn && auth.user ? (
             <div className="navbar-nav ml-auto">
               <li className="nav-item">
+                <LangSwitcher/>
+              </li>
+              <li className="nav-item">
                 <Link to={"/profile"} className="nav-link">
                   {auth.user.username}
                 </Link>
               </li>
               <li className="nav-item">
                 <a href="/login" className="nav-link" onClick={() => logout()}>
-                  Log Out
+                  {t("logout")}
                 </a>
               </li>
             </div>
@@ -43,13 +50,16 @@ export const Navbar: React.FC<any> = () => {
           (
             <div className="navbar-nav ml-auto">
               <li className="nav-item">
+                <LangSwitcher/>
+              </li>
+              <li className="nav-item">
                 <Link to={"/login"} className="nav-link">
-                  Login
+                  {t("login")}
                 </Link>
               </li>
               <li className="nav-item">
                 <Link to={"/registration"} className="nav-link">
-                  Sign Up
+                  {t("logout")}
                 </Link>
               </li>
             </div>            
@@ -57,7 +67,7 @@ export const Navbar: React.FC<any> = () => {
           </ul>
       </div>
     </nav>
-  );
-};
+  )
+}
 
 export default connect()(Navbar)

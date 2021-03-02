@@ -2,7 +2,7 @@ import React from 'react';
 import FilterLink from '../../containers/FilterLink';
 import { connect } from 'react-redux';
 
-export const Filters: React.FC<any> = ({makes}) => {
+export const Filters: React.FC<{makes: string[]}> = ({makes}) => {
 
   return (
   <div className='filters'>
@@ -15,7 +15,7 @@ export const Filters: React.FC<any> = ({makes}) => {
       </FilterLink>
     ))}
   </div>
-  );
+  )
 } 
 
 export default connect()(Filters)

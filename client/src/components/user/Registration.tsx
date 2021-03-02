@@ -10,7 +10,7 @@ const initialFormData: ILogin = {
   password: ""
 };
 
-export const Registration: React.FC<any> = ({dispatch, history}) => {
+export const Registration: React.FC<{}> = () => {
   const [formData, updateFormData] = React.useState(initialFormData);
   const [message, updateMessage] = React.useState(initialMessage);
 
@@ -20,8 +20,8 @@ export const Registration: React.FC<any> = ({dispatch, history}) => {
       ...formData,
   
       [e.target.name]: e.target.value.trim()
-    });
-  };
+    })
+  }
 
   const validate = (element): void => {
     switch (element.name) {
@@ -85,7 +85,7 @@ export const Registration: React.FC<any> = ({dispatch, history}) => {
         <button className="btn waves-effect waves-light" type="submit" name="action" onClick={handleSubmit}>Submit</button>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default connect()(Registration)
